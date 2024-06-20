@@ -1,0 +1,325 @@
+.ddImg {
+    position: relative;
+    left: 210px;
+    top: -465px;
+    z-index: 2;
+    display: none;
+}
+
+.ddImg img {
+    height: 465px;
+}
+
+/* 5. 页面主体main部分 */
+
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+    overflow: hidden;
+    position: relative;
+}
+
+.focusImg {
+    position: relative;
+    display: flex;
+}
+
+.focusImg img {
+    width: 721px;
+    height: 455px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 30px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    display: none;
+}
+
+#Left_arrow {
+    border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
+}
+
+#Right_arrow {
+    right: 0;
+    border-radius: 100% 0% 0% 100% / 50% 50% 50% 50%;
+}
+
+#dot_location {
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    top: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    /* 修成圆 */
+    padding: 3px 5px;
+}
+
+.fir {
+    background-color: white;
+}
+
+#dot_location li {
+    width: 9px;
+    height: 9px;
+    margin: 2px;
+    border: 2px solid white;
+    float: left;
+    list-style: none;
+    border-radius: 50%;
+    /* 修成圆 */
+}
+
+
+.main .newflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.newflash .news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.newflash .liveservice {
+    height: 209px;
+    border: 1px solid #ccc;
+    border-top: 0px;
+    overflow: hidden;
+}
+
+.newflash .bargain {
+    margin-top: 5px;
+}
+
+.news .news_hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #ccc;
+    padding: 0 15px;
+}
+
+.news_hd h5 {
+    font-size: 14px;
+    float: left;
+}
+
+.news_hd .more {
+    float: right;
+}
+
+.news_hd .more::after {
+    font-family: 'icomoon';
+    content: "\e920";
+}
+
+.news_bd {
+    padding: 5px 15px 0px;
+}
+
+.news_bd ul li {
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.liveservice ul {
+    width: 252px;
+}
+
+.liveservice ul li {
+    text-align: center;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.liveservice ul li i {
+    margin-top: 12px;
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: url(../../images/icons.png) no-repeat -19px -15px;
+}
+
+
+/* 6.今日推荐部分 */
+
+.recom {
+    height: 163px;
+    margin-top: 12px;
+    background-color: #ebebeb;
+}
+
+.recom .recom_hd {
+    width: 210px;
+    height: 100%;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #c81623;
+    float: left;
+}
+
+#div1 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.recom_hd div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.Time1 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.recom_hd e {
+    float: left;
+    color: rgb(51, 51, 51);
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+
+.recom .recom_bd {
+    width: 990px;
+    height: 100%;
+    float: left;
+    background-color: aqua;
+}
+
+.recom_bd ul li {
+    position: relative;
+    float: left;
+}
+
+.recom_bd ul li img {
+    width: 246px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+
+/* 7.楼层区域的制作 */
+/* 7-1 .1楼家用电器模块的制作*/
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_hd {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.box_hd .tab_list {
+    float: right;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 15px;
+}
+
+
+/* 7-1.tab栏选项卡内容的制作 */
+
+.box_bd {
+    height: 361px;
+}
+
+.tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.col_210 {
+    padding-top: 5px;
+    width: 210px;
+    background-color: #f9f9f9;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin-right: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+.bb {
+    display: block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ddItem li:hover {
+    background-color: aqua;
+}

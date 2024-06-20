@@ -1,0 +1,103 @@
+/* 列表页list专有的CSS文件 */
+
+.nav {
+    overflow: hidden;
+}
+
+
+/* 秒杀图片制作 */
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 10px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+
+/* nav导航栏左侧*/
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+    line-height: 47px;
+}
+
+.sk_list ul li a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 30px;
+    color: #000;
+}
+
+
+/* nav导航栏右侧*/
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+    line-height: 50px;
+}
+
+.sk_con ul li a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+
+.sk_con_img {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 84%;
+    height: 130px;
+    left: 8%;
+    top: 183px;
+    box-shadow: 0px 3px 0px rgb(0, 0, 0, 0.1);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.sk_con_img div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.sk_con_img img {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*产a品展示 */
+
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0px;
+}

@@ -1,0 +1,149 @@
+/* 版心大小 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+    padding-top: 18px;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    height: 42px;
+    line-height: 42px;
+    background-color: #ececec;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.registerarea .login {
+    float: right;
+    font-size: 14px;
+}
+
+.login a {
+    color: #c81523;
+}
+
+
+/* 注册页面的主体部分制作 */
+
+.reg_form {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.reg_form label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.reg_form .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form .error {
+    color: #c81523;
+}
+
+
+.safe {
+    padding-left: 158px;
+}
+
+.ruo,
+.zhong,
+.qiang {
+    color: #fff;
+    padding: 0 12px;
+    margin-left: 2px;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.agree {
+    padding-left: 100px;
+}
+
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #c81523;
+}
+
+.btn {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    color: #fff;
+    margin: 30px 0 0 100px;
+}
+
+
+/* copyright */
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.mod_copyright .links {
+    margin-bottom: 20px;
+}
+
+.mod_copyright .links a {
+    padding: 0 3px;
+}
+
+.mod_copyright .copyright {
+    line-height: 20px;
+}
+
+.success-icon,
+.error-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.success-icon {
+    background-image: url(../../images/success.png);
+}
+
+.error-icon {
+    background-image: url(../../images/error.png);
+}
+.success{
+    color: green;
+}
