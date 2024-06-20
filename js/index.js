@@ -188,4 +188,16 @@ function Time() {
     //秒
     second = parseInt(endTime % 60);
     endsecond.innerHTML = second < 10 ? '0' + second : second;
-}
+};
+
+/* 使用标签页通信实现购物车里面物品数量的实时显示 */
+/* 使用BroadcastChannel */
+/* 这是接收页 */
+// 创建一个广播通道
+const channel = new BroadcastChannel('myChannel');
+// 监听消息事件
+channel.onmessage = function (event) {
+    const message = event.data;
+    document.querySelector('.count').innerHTML=message;
+    //message是监听到的信息
+};
