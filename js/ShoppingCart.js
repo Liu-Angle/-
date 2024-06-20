@@ -147,3 +147,13 @@ $('.clear-all').click(function () {
         getMoney();
     };
 });
+
+/* 使用标签页通信实现购物车里面物品数量的实时显示 */
+/* 使用BroadcastChannel */
+/* 这是发送页 */
+// 创建一个广播通道
+const channel = new BroadcastChannel('myChannel');
+//获取购物车物品数量
+var Quantity = $('.cart-item').length;
+// 发送消息
+channel.postMessage(Quantity);
