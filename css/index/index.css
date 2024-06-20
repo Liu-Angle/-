@@ -323,3 +323,7 @@
 .ddItem li:hover {
     background-color: aqua;
 }
+
+.wx_cz{
+    width: 90px;
+}
