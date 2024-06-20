@@ -101,3 +101,7 @@
 .sk_bd ul li:nth-child(4n) {
     margin-right: 0px;
 }
+
+.wx_cz{
+    width: 90px;
+}
