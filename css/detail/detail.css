@@ -408,3 +408,39 @@
     font-weight: 700;
     font-family: 'icomoon';
 }
+
+#Comments {
+    width: 100%;
+}
+
+#Comments ul li {
+    width: 100%;
+    background-color: aliceblue;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 15px 0;
+    list-style: none;
+}
+
+#Del {
+    float: right;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 25px;
+}
+
+#Comments button {
+    margin-left: 2px;
+    width: 100px;
+    height: 50px;
+    float: right;
+}
+
+#but {
+    height: 50px;
+    margin: 0;
+}
