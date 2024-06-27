@@ -208,7 +208,6 @@ add.addEventListener('click', function () {
     };
     reduce.style.cursor = '';
 });
-
 //减功能
 reduce.addEventListener('click', function () {
     var NumberPurchases = Number(quantity.value);
@@ -232,3 +231,112 @@ channel.onmessage = function (event) {
     document.querySelector('.count').innerHTML=message;
     //message是监听到的信息
 };
+
+
+
+var ul1 = document.querySelector('#u1');
+var text = document.querySelector('textarea');
+var Publish=document.querySelector('#Publish');
+var DelAll = document.querySelector('#DelAll');
+var DelNew = document.querySelector('#DelNew');
+
+//发布
+Publish.onclick = function () {
+    if (text.value == '') {
+        alert('输入内容错误！');
+        return false;
+    } else {
+        var List = document.createElement('li');
+        List.innerHTML = text.value + '<br><br>' + Time() + "<a id='Del' href='javascript:;'>删除</a>";
+        ul1.insertBefore(List, ul1.children[0]);
+        text.value = '';   //清空输入框内容
+
+
+        /* 删除功能 */
+        var as = List.querySelectorAll('#Del');
+
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                ul1.removeChild(this.parentNode);
+
+                //点击删除后检查,如果没有评论就禁用删除新评论按钮
+                if (ul1.children.length == 0) {
+                    DelNew.disabled = true;
+                    DelAll.disabled = true;
+                }
+            }
+        }
+
+        //点击发布后启用删除评论按钮
+        DelNew.disabled = false;
+        DelAll.disabled = false;
+    }
+}
+
+//如果刷新页面时没有评论就禁用
+if (ul1.children.length == 0) {
+    DelNew.disabled = true;
+    DelAll.disabled = true;
+}
+
+/* 删除新评论按钮 */
+DelNew.onclick = function () {
+    if (ul1.children.length == 0) {
+        this.disabled = true;
+    } else {
+        ul1.removeChild(ul1.children[0]);
+
+        //如果没有评论就禁用
+        if (ul1.children.length == 0) {
+            this.disabled = true;
+            DelAll.disabled = true;
+        }
+    }
+}
+
+/* 删除全部评论按钮 */
+DelAll.onclick = function () {
+    if (ul1.children.length == 0) {
+        this.disabled = true;
+    } else {
+        while (ul1.firstChild) {
+            ul1.removeChild(ul1.firstChild);
+        }
+
+        //如果没有评论就禁用
+        if (ul1.children.length == 0) {
+            this.disabled = true;
+            DelNew.disabled = true;
+        }
+    }
+}
+
+
+/* 获取时间 */
+function Time() {
+    var Date1 = new Date();
+
+    //返回当前时间戳总毫秒数
+    var Date2 = +new Date();
+
+    //年
+    var year = Date1.getFullYear();
+
+    //月
+    var month = Date1.getMonth();
+
+    //日
+    var day = Date1.getDate();
+
+    //时
+    var hour = Date1.getHours();
+
+    //分
+    var minute = Date1.getMinutes();
+
+    //秒
+    var second = Date1.getSeconds();
+
+    //返回值
+    return `发布时间：${year}年${month}月${day}日 ${hour}时${minute}分${second}秒`;
+}
